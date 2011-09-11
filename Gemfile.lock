@@ -1,7 +1,14 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    coffee-script (2.2.0)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.1.1)
     cri (2.0.2)
+    execjs (1.2.0)
+      multi_json (~> 1.0)
+    multi_json (1.0.3)
     nanoc (3.2.1)
       nanoc3 (>= 3.2.1)
     nanoc3 (3.2.1)
@@ -11,4 +18,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  coffee-script
   nanoc
