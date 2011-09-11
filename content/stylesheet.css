@@ -1,101 +1,77 @@
-* {
+body {
+  color: black;
+  background: black;
+  font-size: 4000%;
+  font-family: Georgia, serif;
+  text-align: center;
+  -webkit-text-stroke: 4px white;
+}
+
+body p {
   margin: 0;
   padding: 0;
-
-  font-family: Georgia, Palatino, Times, 'Times New Roman', sans-serif;
 }
 
-body {
-  background: #fff;
-}
-
-a {
+body a,
+body a:hover {
+  color: inherit;
+  background: inherit;
   text-decoration: none;
 }
 
-a:link,
-a:visited {
-  color: #f30;
+/*
+ * CSS animated rainbow dividers of awesome 
+ * by Chris Heilmann @codepo8 and Lea Verou @leaverou 
+**/
+@-moz-keyframes charlieeee {
+  from { background-position:top left; } 
+  to {background-position:top right; }
 }
-
-a:hover {
-  color: #f90;
+@-webkit-keyframes charlieeee { 
+  from { background-position:top left; }  
+  to { background-position:top right; }  
 }
-
-#main {
-  position: absolute;
-
-  top: 40px;
-  left: 280px;
-
-  width: 500px;
+@-o-keyframes charlieeee { 
+  from { background-position:top left; }  
+  to { background-position:top right; }  
 }
-
-#main h1 {
-  font-size: 40px;
-  font-weight: normal;
-
-  line-height: 40px;
-
-  letter-spacing: -1px;
+@-ms-keyframes charlieeee { 
+  from { background-position:top left; }  
+  to { background-position:top right; }  
 }
-
-#main p {
-  margin: 20px 0;
-  
-  font-size: 15px;
-  
-  line-height: 20px;
+@-khtml-keyframes charlieeee { 
+  from { background-position:top left; }  
+  to { background-position:top right; }  
 }
-
-#main ul, #main ol {
-  margin: 20px;
+@keyframes charlieeee { 
+  from { background-position:top left; }  
+  to { background-position:top right; }  
 }
-
-#main li {
-  font-size: 15px;
-  
-  line-height: 20px;
-}
-
-#main ul li {
-  list-style-type: square;
-}
-
-#sidebar {
-  position: absolute;
-
-  top: 40px;
-  left: 20px;
-  width: 200px;
-
-  padding: 20px 20px 0 0;
-
-  border-right: 1px solid #ccc;
-
-  text-align: right;
-}
-
-#sidebar h2 {
-  text-transform: uppercase;
-
-  font-size: 13px;
-
-  color: #333;
-
-  letter-spacing: 1px;
-
-  line-height: 20px;
-}
-
-#sidebar ul {
-  list-style-type: none;
-
-  margin: 20px 0;
-}
-
-#sidebar li {
-  font-size: 14px;
-
-  line-height: 20px;
+.catchadream {
+  background-image:-webkit-linear-gradient( left, red, orange, yellow, green,
+                                          blue, indigo, violet, indigo, blue,
+                                          green, yellow, orange, red );
+  background-image:-moz-linear-gradient( left, red, orange, yellow, green,
+                                         blue,indigo, violet, indigo, blue,
+                                         green, yellow, orange,red );
+  background-image:-o-linear-gradient( left, red, orange, yellow, green,
+                                         blue,indigo, violet, indigo, blue,
+                                         green, yellow, orange,red );
+  background-image:-ms-linear-gradient( left, red, orange, yellow, green,
+                                         blue,indigo, violet, indigo, blue,
+                                         green, yellow, orange,red );
+  background-image:-khtml-linear-gradient( left, red, orange, yellow, green,
+                                         blue,indigo, violet, indigo, blue,
+                                         green, yellow, orange,red );
+  background-image:linear-gradient( left, red, orange, yellow, green,
+                                         blue,indigo, violet, indigo, blue,
+                                         green, yellow, orange,red );
+  -moz-animation:charlieeee 2.5s forwards linear infinite;
+  -webkit-animation:charlieeee 2.5s forwards linear infinite;
+  -o-animation:charlieeee 2.5s forwards linear infinite;
+  -khtml-animation:charlieeee 2.5s forwards linear infinite;
+  -ms-animation:charlieeee 2.5s forwards linear infinite;
+  -lynx-animation:charlieeee 2.5s forwards linear infinite;
+  animation:charlieeee 2.5s forwards linear infinite;
+  background-size:50% auto;
 }

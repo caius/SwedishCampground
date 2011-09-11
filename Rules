@@ -17,6 +17,10 @@ compile '/stylesheet/' do
   # don’t filter or layout
 end
 
+compile "/js/*/" do
+  # don’t filter or layout
+end
+
 compile "/coffee/*/" do
   filter :coffee
 end
@@ -25,6 +29,10 @@ compile '*' do
   if item.binary?
     # don’t filter binary items
   else
+    case item[:extension]
+    when "md"
+      filter :kramdown
+    end
     filter :erb
     layout 'default'
   end
@@ -34,8 +42,12 @@ route '/stylesheet/' do
   '/style.css'
 end
 
+route "/js/*/" do
+  item.identifier.chop + ".js"
+end
+
 route "/coffee/*/" do
-  item.identifier.sub(%r{^/coffee}, '/javascripts').chop + '.js'
+  item.identifier.sub(%r{^/coffee}, '/js').chop + '.js'
 end
 
 route '*' do
